@@ -6,9 +6,8 @@
 <meta charset="utf-8">
 
 <title>新年快乐</title>
-<img src="https://ajlovechina.github.io/loveBalloon/static/music.png" style="position: fixed;z-index: 10001;top:10px;right:10px;" onclick="let m = document.querySelector('.song-audio-autoplay'); if (m.paused ) {m.play(); this.className = 'rotateImages'} else {m.pause(); this.className = ''}">
-<audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
-    <source src="/1.mp3" type="audio/mp3"/>
+<audio class="song-audio-autoplay" id="aa" controls loop style="display: none;visibility: hidden">
+    <source src="1.mp3" type="audio/mp3"/>
 </audio>
  <a href="1.html" id="get"></a>
 <style>
@@ -72,7 +71,7 @@ margin-top:30px;
 <canvas></canvas> <!--canvas 画布-->
  
 <script>
- 
+document.getElementById('aa').play();
 var canvas = document.querySelector("canvas"),
  
   ctx = canvas.getContext("2d");
