@@ -30,7 +30,7 @@ body{
   margin: 0;
  
 }
-
+ 
 h1{
  
   position: fixed;
@@ -76,10 +76,23 @@ margin-top:30px;
 </head>
  
 <body>
- 
+
 <h1 id="h1" style="display: none;"></h1>
-<div style="transform: translate(40%,700%);">
-  <button type="button" class="start" id="start" onclick="showYear()">跨年倒计时啦!</button>
+  <div style="transform: translate(30%,15%);" id="hope">
+    <span style="font-family:'Courier New', Courier, monospace;font-size: x-large;color: rgb(0, 0, 0);">
+      封一座城，护一国人,
+      “西”望大家，“安”然无恙;</br></br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;长安常安，西安平安！</br></br>
+      所有在西安的亲人、朋友们做好防护，我们一起静待花开！</br></br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;中国加油！</br></br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;陕西加油！</br></br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;西安加油
+    </span>
+  </div>
+  <div style="transform: translate(41%,200%);">
+    <button type="button" class="start" id="start" onclick="showYear()">跨年倒计时啦!</button>
+  </div>
+<div style="background-image: url(1.jpg);width: 474px;height: 201px;">
 </div>
 <canvas style="display: none;" id="showPage"></canvas> <!--canvas 画布-->
  
@@ -89,6 +102,7 @@ margin-top:30px;
     document.getElementById('start').style.display="none"
     document.getElementById('h1').style.display=""
     document.getElementById('showPage').style.display=""
+    document.getElementById('hope').style.display="none"
   }
 function show() {
    document.getElementById('aa').play();
@@ -281,7 +295,7 @@ window.onload=function starttime(){
  
         var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
 
-	if(day == 0) {
+		if(day == 0) {
             if(hour <= 0) {
                 if(minute <= 0) {
                     if(second <= 0) {
